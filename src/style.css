@@ -1018,13 +1018,12 @@ td:first-child { color: #d2e5f7; font-weight: 800; }
   margin: 0 auto 18px;
 }
 .footer-legal p:first-child { margin-bottom: 26px; }
-.footer-legal strong { color: #fff; font-weight: 900; }
 .footer-legal button {
-  color: #fff;
+  color: inherit;
   display: inline;
   font-size: inherit;
-  font-weight: 900;
-  text-decoration: underline;
+  font-weight: inherit;
+  text-decoration: none;
 }
 .footer-brand {
   color: #fff;
@@ -1048,4 +1047,11 @@ td:first-child { color: #d2e5f7; font-weight: 800; }
   .footer-columns { grid-template-columns: 1fr; }
   .stake-footer { text-align: left; }
   .footer-socials, .footer-brand { justify-content: flex-start; text-align: left; }
+}.okk-footer-brand {
+  color: #fff;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
