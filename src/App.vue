@@ -40,7 +40,7 @@ const themes: Record<string, { bg: string; accent: string; icon: string }> = {
   classic: { bg: '#21385f', accent: '#ff5c7a', icon: '777' },
   live: { bg: '#102f36', accent: '#7dff67', icon: 'LIVE' },
   table: { bg: '#173827', accent: '#f8f9fa', icon: 'TABLE' },
-  original: { bg: '#112f46', accent: '#7dff67', icon: 'OKK' },
+  original: { bg: '#112f46', accent: '#7dff67', icon: 'SQ' },
   wheel: { bg: '#3d2a55', accent: '#a78bfa', icon: 'SPIN' },
 }
 
@@ -245,7 +245,7 @@ function themeArt(themeKey: string, accent: string, title = '') {
       <text x="120" y="122" text-anchor="middle" font-family="Inter,Arial" font-size="24" font-weight="900" fill="#061722">21</text>`,
     original: `
       <path d="M78 50h84l42 72-42 72H78l-42-72Z" fill="#7dff67" ${commonShadow}/>
-      <text x="120" y="134" text-anchor="middle" font-family="Inter,Arial" font-size="46" font-weight="900" fill="#061722">OKK</text>`,
+      <text x="120" y="134" text-anchor="middle" font-family="Inter,Arial" font-size="46" font-weight="900" fill="#061722">SQ</text>`,
     wheel: `
       <circle cx="120" cy="110" r="70" fill="#a78bfa" ${commonShadow}/>
       <path d="M120 40v140M50 110h140M70 60l100 100M170 60 70 160" stroke="#fff" stroke-width="5" opacity=".55"/>
@@ -344,11 +344,11 @@ const allGames = ref<Game[]>([
   { title: 'Bonanza Megaways', players: 127, category: 'Megaways', provider: 'Big Time Gaming', theme: 'gems' },
   { title: 'Fishin Frenzy', players: 118, category: 'Slots', provider: 'Blueprint Gaming', theme: 'fish' },
   { title: 'Le Bandit', players: 110, category: 'Stake Originals', provider: 'Hacksaw Gaming', theme: 'classic', favorite: true, recent: true, img: assets.leBandit },
-  { title: 'Plinko', players: 109, category: 'Stake Originals', provider: 'OKK Originals', theme: 'original', following: true },
-  { title: 'Mines', players: 107, category: 'Stake Originals', provider: 'OKK Originals', theme: 'original' },
-  { title: 'Dice', players: 103, category: 'Stake Originals', provider: 'OKK Originals', theme: 'original', recent: true },
-  { title: 'Limbo', players: 99, category: 'Stake Originals', provider: 'OKK Originals', theme: 'original' },
-  { title: 'Keno', players: 93, category: 'Stake Originals', provider: 'OKK Originals', theme: 'original' },
+  { title: 'Plinko', players: 109, category: 'Stake Originals', provider: 'SweepQuest Originals', theme: 'original', following: true },
+  { title: 'Mines', players: 107, category: 'Stake Originals', provider: 'SweepQuest Originals', theme: 'original' },
+  { title: 'Dice', players: 103, category: 'Stake Originals', provider: 'SweepQuest Originals', theme: 'original', recent: true },
+  { title: 'Limbo', players: 99, category: 'Stake Originals', provider: 'SweepQuest Originals', theme: 'original' },
+  { title: 'Keno', players: 93, category: 'Stake Originals', provider: 'SweepQuest Originals', theme: 'original' },
   { title: 'Live Blackjack', players: 88, category: 'Live Dealers', provider: 'Evolution', theme: 'live' },
   { title: 'Lightning Roulette', players: 82, category: 'Live Dealers', provider: 'Evolution', theme: 'live' },
   { title: 'Baccarat Squeeze', players: 74, category: 'Live Dealers', provider: 'Evolution', theme: 'live' },
@@ -377,7 +377,7 @@ const allGames = ref<Game[]>([
   { title: 'Buckshot Benny', players: 35, category: 'Slots', provider: 'Titan Gaming', theme: 'adventure' },
   { title: 'Canyon Gold Bonanza', players: 45, category: 'Megaways', provider: 'Titan Gaming', theme: 'jackpot' },
   { title: 'Soul Catcher', players: 19, category: 'New Releases', provider: 'Knucklehead Syndicate', theme: 'myth' },
-  { title: 'Tome of Life', players: 93, category: 'Stake Originals', provider: 'OKK Originals', theme: 'myth' },
+  { title: 'Tome of Life', players: 93, category: 'Stake Originals', provider: 'SweepQuest Originals', theme: 'myth' },
   { title: 'Battle Sharks', players: 27, category: 'Slots', provider: 'Pocket Play', theme: 'fish' },
   { title: 'Supercharged Clovers', players: 57, category: 'Jackpots', provider: 'Playson', theme: 'gems' },
   { title: 'Sugar Gates 1K', players: 35, category: 'Megaways', provider: 'Colorful Play', theme: 'candy' },
@@ -413,12 +413,12 @@ const allGames = ref<Game[]>([
   { title: 'Three Card Poker', players: 25, category: 'Table Games', provider: 'NetEnt', theme: 'table' },
   { title: 'Casino Holdem', players: 22, category: 'Table Games', provider: 'Microgaming', theme: 'table' },
   { title: 'Roulette Royale', players: 52, category: 'Table Games', provider: 'Evolution', theme: 'table' },
-  { title: 'Crash', players: 86, category: 'Stake Originals', provider: 'OKK Originals', theme: 'original', recent: true },
-  { title: 'Slide', players: 75, category: 'Stake Originals', provider: 'OKK Originals', theme: 'original' },
-  { title: 'Tower', players: 68, category: 'Stake Originals', provider: 'OKK Originals', theme: 'original' },
-  { title: 'Dragon Tower', players: 63, category: 'Stake Originals', provider: 'OKK Originals', theme: 'original' },
-  { title: 'Hilo', players: 58, category: 'Stake Originals', provider: 'OKK Originals', theme: 'original' },
-  { title: 'Roulette Original', players: 52, category: 'Stake Originals', provider: 'OKK Originals', theme: 'original' },
+  { title: 'Crash', players: 86, category: 'Stake Originals', provider: 'SweepQuest Originals', theme: 'original', recent: true },
+  { title: 'Slide', players: 75, category: 'Stake Originals', provider: 'SweepQuest Originals', theme: 'original' },
+  { title: 'Tower', players: 68, category: 'Stake Originals', provider: 'SweepQuest Originals', theme: 'original' },
+  { title: 'Dragon Tower', players: 63, category: 'Stake Originals', provider: 'SweepQuest Originals', theme: 'original' },
+  { title: 'Hilo', players: 58, category: 'Stake Originals', provider: 'SweepQuest Originals', theme: 'original' },
+  { title: 'Roulette Original', players: 52, category: 'Stake Originals', provider: 'SweepQuest Originals', theme: 'original' },
   { title: 'Nitro Nights', players: 41, category: 'New Releases', provider: 'Hacksaw Gaming', theme: 'classic' },
   { title: 'Rug Dealer', players: 30, category: 'New Releases', provider: 'Avatar UX', theme: 'adventure' },
 ])
@@ -426,7 +426,7 @@ const allGames = ref<Game[]>([
 const navTop = ['Faved Games', 'Following', 'Continue Playing']
 const categories = ['Stake Originals', 'Slots', 'Megaways', 'Jackpots', 'Live Dealers', 'Table Games', 'Game Shows', 'New Releases'] as const
 type Category = (typeof categories)[number]
-const providers = ['All Providers', 'Pragmatic Play', 'Pragmatic Play Live', 'Evolution', 'NetEnt', 'Play n GO', 'Microgaming', 'Big Time Gaming', 'Blueprint Gaming', 'Hacksaw Gaming', 'OKK Originals', 'Spin Reaper', 'Kangaroo Fleet', 'Mining Mayhem']
+const providers = ['All Providers', 'Pragmatic Play', 'Pragmatic Play Live', 'Evolution', 'NetEnt', 'Play n GO', 'Microgaming', 'Big Time Gaming', 'Blueprint Gaming', 'Hacksaw Gaming', 'SweepQuest Originals', 'Spin Reaper', 'Kangaroo Fleet', 'Mining Mayhem']
 type SidebarItem =
   | { label: string; icon: string; nav: string }
   | { label: string; icon: string; category: Category }
@@ -682,7 +682,7 @@ const carouselSlides = [
 ]
 const tradePanels = {
   'Recent Bets': {
-    summary: 'Live stream of the latest sweeps wagers across OKK STAKES.',
+    summary: 'Live stream of the latest sweeps wagers across SweepQuest.',
     columns: ['Game', 'User', 'Time', 'Bet Amount', 'Multiplier', 'Payout'],
     rows: [
       ['Blackjack', 'Hidden', '8:15 PM', '13.76', '2.00x', '27.52'],
@@ -726,7 +726,7 @@ const tradePanels = {
 const chat = ref<ChatEntry[]>([
   { name: 'LuckyMason:', time: '12:02', text: 'Sweet Bonanza is heating up today. Three bonus drops already.', avatar: chatAvatar('LuckyMason', '#123a5d', '#38d6ff'), color: '#38d6ff' },
   { name: 'RubySpin:', time: '12:04', text: 'Big Bass Splash paid me on the last scatter. That was clean.', avatar: chatAvatar('RubySpin', '#4a1630', '#ff6fd8'), color: '#ff6fd8' },
-  { name: 'OKKHost:', time: '12:05', text: 'Welcome to OKK STAKES. Keep chat friendly and enjoy the sweeps lobby.', avatar: chatAvatar('OKKHost', '#112f46', '#7dff67'), color: '#7dff67' },
+  { name: 'SweepQuestHost:', time: '12:05', text: 'Welcome to SweepQuest. Keep chat friendly and enjoy the sweeps lobby.', avatar: chatAvatar('SweepQuestHost', '#112f46', '#7dff67'), color: '#7dff67' },
   { divider: 'NEW BONUS DROP' },
   { name: 'TableWolf:', time: '12:07', text: 'Live Blackjack tables feel smooth. Dealer switched fast too.', avatar: chatAvatar('TableWolf', '#173827', '#f8f9fa'), color: '#d3e6f6' },
   { name: 'PixelAce:', time: '12:08', text: 'Anyone tried Gates of Olympus after the new carousel update?', avatar: chatAvatar('PixelAce', '#2d2d65', '#ffd166'), color: '#ffd166' },
@@ -959,7 +959,7 @@ onUnmounted(() => {
       <div class="brand-search">
         <button class="brand action-link" type="button" @click="resetFilters">
           <span class="brand-mark" aria-hidden="true"></span>
-          <strong>OKK STAKES</strong>
+          <strong>SweepQuest</strong>
         </button>
         <label class="search">
           <span>Search</span>
@@ -992,13 +992,13 @@ onUnmounted(() => {
           </div>
         </div>
         <div v-if="!isLoggedIn" class="auth-actions">
-          <button class="login-btn" type="button" @click="openModal('Login', 'Login to OKK STAKES')">Login</button>
-          <button class="register-btn" type="button" @click="openModal('Register', 'Create an OKK STAKES account')">Register</button>
+          <button class="login-btn" type="button" @click="openModal('Login', 'Login to SweepQuest')">Login</button>
+          <button class="register-btn" type="button" @click="openModal('Register', 'Create a SweepQuest account')">Register</button>
         </div>
         <div v-else class="top-menu">
           <button class="avatar-btn" type="button" aria-label="Account menu" @click="toggleTopMenu('profile')"><img class="user" :src="assets.user" alt="" /></button>
           <div v-if="topMenu === 'profile'" class="top-popover profile-popover">
-            <strong>OKK Player</strong>
+            <strong>SweepQuest Player</strong>
             <span>Level 1 - Bronze</span>
             <button type="button" @click="openModal('Account', 'Profile, VIP progress, rewards, and logout controls.')">View profile</button>
             <button type="button" @click="openModal('Rewards', 'Daily wheel, rakeback, and bonus drops are grouped here.')">Rewards</button>
@@ -1270,12 +1270,12 @@ onUnmounted(() => {
         </div>
         <div class="footer-rule"></div>
         <div class="footer-legal">
-          <p>© 2026 OKK STAKES | All Rights Reserved.</p>
-          <p>OKK STAKES is owned and operated by OKK STAKES LLC, registration number 2026-002006824, registered address Room R, 30 N Gould St, Sheridan, WY 82801, United States. Contact us at support@okkstakes.com.</p>
+          <p>© 2026 SweepQuest | All Rights Reserved.</p>
+          <p>SweepQuest is owned and operated by SweepQuest LLC, registration number 2026-002006824, registered address 233 S Lennox St, Casper, Wyoming 82601, United States. Contact us at support@sweepquest.com.</p>
           <p>NO PURCHASE NECESSARY to enter Sweepstakes. SWEEPSTAKES ARE VOID WHERE PROHIBITED BY LAW. For detailed rules, see <button type="button" @click="openModal('Terms of Service', 'Terms of service opened.')">terms of service</button></p>
-          <p>OKK STAKES is committed to responsible social play, for more information visit <button type="button" @click="triggerSidebarItem(sidebarUtilityItems[5])">Gamingaddictsanonymous.org</button></p>
+          <p>SweepQuest is committed to responsible social play, for more information visit <button type="button" @click="triggerSidebarItem(sidebarUtilityItems[5])">Gamingaddictsanonymous.org</button></p>
         </div>
-        <div class="footer-brand okk-footer-brand">OKK STAKES</div>
+        <div class="footer-brand okk-footer-brand">SweepQuest</div>
       </footer>
     </main>
 
@@ -1312,7 +1312,7 @@ onUnmounted(() => {
     <div v-if="modalTitle" class="modal-backdrop" @click.self="closeModal">
       <section v-if="modalTitle === 'Login'" class="auth-modal">
         <button class="auth-close" type="button" aria-label="Close" @click="closeModal">×</button>
-        <div class="auth-brand">OKK STAKES</div>
+        <div class="auth-brand">SweepQuest</div>
         <label>Email or Username <b>*</b><input type="text" autocomplete="username" /></label>
         <label>Password <b>*</b><span><input type="password" autocomplete="current-password" /><i>●</i></span></label>
         <button class="forgot-link" type="button" @click="showToast('Password recovery opened')">Forgot Password?</button>
@@ -1326,11 +1326,11 @@ onUnmounted(() => {
 
       <section v-else-if="modalTitle === 'Register'" class="auth-modal register-modal">
         <button class="auth-close" type="button" aria-label="Close" @click="closeModal">×</button>
-        <div class="auth-brand">OKK STAKES</div>
+        <div class="auth-brand">SweepQuest</div>
         <div class="auth-progress"><span></span><span></span></div>
         <small>Step 1 / 2</small>
         <h2>Create an Account</h2>
-        <p class="auth-warning">Due to licensing restrictions, access to OKK STAKES from your current location is not available.</p>
+        <p class="auth-warning">Due to licensing restrictions, access to SweepQuest from your current location is not available.</p>
         <label>Email <b>*</b><input type="email" autocomplete="email" /></label>
         <label>Username <b>*</b><input type="text" autocomplete="username" /></label>
         <label>Password <b>*</b><span><input type="password" autocomplete="new-password" /><i>●</i></span></label>
@@ -1349,4 +1349,3 @@ onUnmounted(() => {
     </div>
   </div>
 </template>
-
